@@ -14,8 +14,24 @@ public class Robot {
     private int y; //(inc. by 1 when going North or dec. by 1 when going South)
     private Direction direction;
 
+    /**
+     * advances the robot in the current direction it is facing
+     */
     public void advance(){
+        if (direction == Direction.East){
+            x += 1;
+        } else if (direction == Direction.West){
+            x -= 1;
+        } else if (direction == Direction.North){
+            y += 1;
+        } else { // direciton = south
+            y -= 1;
+        }
+    }
 
+    public void display(){
+        System.out.println("Robot number: " + ID);
+        System.out.println("Current position: (" + x + "," + y + "), facing " + direction);
     }
 
     // setters ----------------------------------------------------------------
@@ -31,6 +47,10 @@ public class Robot {
         this.y = y;
     }
 
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
     // getters ----------------------------------------------------------------
     public int getID() {
         return ID;
@@ -42,6 +62,10 @@ public class Robot {
 
     public int getX() {
         return x;
+    }
+
+    public Direction getDirection() {
+        return direction;
     }
 
     // constructors -----------------------------------------------------------
