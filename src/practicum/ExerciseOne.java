@@ -4,7 +4,9 @@ Class: ExerciseOne
 Name: Margaret Gray
 Email: mag5244@rit.edu
 
-Description:
+Description: takes input n, bigger than zero and strictly positive, and
+calculates * 1 + 1/2 + 1/3 + 1/4 + ... + 1/n and returns the value of that
+sum as a float
  */
 package practicum;
 
